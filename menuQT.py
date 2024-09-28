@@ -3,8 +3,8 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from Conexao import Conexao
-from Componentes.CadastrarUser import Ui_Form
-from Componentes.menuInicial import Ui_MenuInicial
+from Componentes.CadastrarUser import Ui_CadastrarUsuario
+from Componentes.menuPYQT import Ui_MenuInicial
 from Componentes.telalogin import Ui_TelaLogin
 from Componentes.TelaRemover import Ui_TelaRemover
 
@@ -31,7 +31,7 @@ class JanelaPrincipal(QMainWindow):
         self.layoutContentPane.addWidget(self.telaMenuInicial)
         
         self.telaCadastrar = QWidget()
-        self.construtorTelaCadastrar = Ui_Form()
+        self.construtorTelaCadastrar = Ui_CadastrarUsuario()
         self.construtorTelaCadastrar.setupUi(self.telaCadastrar)
         self.construtorTelaCadastrar.BotaoCadastrar.clicked.connect(self.cadastrarUsuario)
         self.layoutContentPane.addWidget(self.telaCadastrar)
