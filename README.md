@@ -28,7 +28,7 @@
 
 ### Menu do Usuário:
 - **Playlists**: Criação e gerenciamento.
-- **Histórico**: Acompanhe suas faixas reproduzidas.
+- **Histórico**: Acompanhe suas faixas reproduzidas no player.
 - **Player**: Acesso ao player PySimpleGUI para tocar as playlists.
 
 ## Requisitos
