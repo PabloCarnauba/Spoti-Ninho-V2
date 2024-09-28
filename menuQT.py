@@ -34,18 +34,22 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaCadastrar = Ui_CadastrarUsuario()
         self.construtorTelaCadastrar.setupUi(self.telaCadastrar)
         self.construtorTelaCadastrar.BotaoCadastrar.clicked.connect(self.cadastrarUsuario)
+        self.construtorTelaCadastrar.backButton_2.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))   
+
         self.layoutContentPane.addWidget(self.telaCadastrar)
 
         self.TelaLogin = QWidget()
         self.construtorTelaLogin = Ui_TelaLogin()
         self.construtorTelaLogin.setupUi(self.TelaLogin)
         self.construtorTelaLogin.BotaoLogin.clicked.connect(self.LogarUsuario)
+        self.construtorTelaLogin.backButton_2.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))
         self.layoutContentPane.addWidget(self.TelaLogin)
 
         self.TelaRemover = QWidget()
         self.construtorTelaRemover = Ui_TelaRemover()
         self.construtorTelaRemover.setupUi(self.TelaRemover)
         self.construtorTelaRemover.BotaoRemover.clicked.connect(self.RemoverUsuario)
+        self.construtorTelaRemover.backButton_2.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))
         self.layoutContentPane.addWidget(self.TelaRemover)
     
 
