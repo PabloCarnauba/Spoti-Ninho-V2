@@ -7,11 +7,13 @@ from Componentes.CadastrarUser import Ui_Form
 from Componentes.menuInicial import Ui_MenuInicial
 from Componentes.telalogin import Ui_TelaLogin
 from Componentes.TelaRemover import Ui_TelaRemover
+from Componentes.menu_usuario import Ui_menu_user
+from Componentes.criarPlaylist import Ui_criarPlay
 
 class JanelaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
+        self.conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
         self.setWindowTitle("Janela Principal")
         self.setFixedSize(400,300)
 
@@ -47,6 +49,25 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaRemover.setupUi(self.TelaRemover)
         self.construtorTelaRemover.BotaoRemover.clicked.connect(self.RemoverUsuario)
         self.layoutContentPane.addWidget(self.TelaRemover)
+        
+        self.TelaMenuUser = QWidget()
+        self.construtorTelaMenuUser = Ui_menu_user()
+        self.construtorTelaMenuUser.setupUi(self.TelaMenuUser)
+        self.construtorTelaMenuUser.button_sair.clicked.connect(lambda:self.close())
+        #self.construtorTelaMenuUser.button_verPlay.clicked.connect()
+        #self.construtorTelaMenuUser.button_escutarPlay.clicked.connect()
+        #self.construtorTelaMenuUser.button_historico.clicked.connect()
+        self.construtorTelaMenuUser.button_criarPlay.clicked.connect(self.exibirCriarPlay)
+        self.layoutContentPane.addWidget(self.TelaMenuUser)
+        
+        self.TelaCriarPlay = QWidget()
+        self.construtorTelaCriarPlay = Ui_criarPlay()
+        self.construtorTelaCriarPlay.setupUi(self.TelaCriarPlay)
+        #self.construtorTelaMenuUser.button_verPlay.clicked.connect()
+        #self.construtorTelaMenuUser.button_escutarPlay.clicked.connect()
+        #self.construtorTelaMenuUser.button_historico.clicked.connect()
+        #self.construtorTelaMenuUser.button_criarPlay.clicked.connect()
+        self.layoutContentPane.addWidget(self.TelaCriarPlay)
     
 
         #Lógica de adição e troca de telas
@@ -81,6 +102,7 @@ class JanelaPrincipal(QMainWindow):
         self.layoutContentPane.setCurrentIndex(1)
 
     def cadastrarUsuario(self):
+        
         nomeUsuario = self.construtorTelaCadastrar.inputUsuario.text()
         EmailUsuario = self.construtorTelaCadastrar.inputEmail.text()
         senhaUsuario = self.construtorTelaCadastrar.inputSenha.text()
@@ -99,17 +121,25 @@ class JanelaPrincipal(QMainWindow):
         self.layoutContentPane.setCurrentIndex(2)   
     
     def LogarUsuario(self):
+        
         nomeUsuario = self.construtorTelaLogin.inputUsuario.text()
         senhaUsuario = self.construtorTelaLogin.inputSenha.text()
-
+        resultado = self.conexaoBD.consultarComParametros("SELECT * FROM usuario WHERE nome = %s AND senha = %s", (nomeUsuario, senhaUsuario))
+        
         if not self.validarCampos(nomeUsuario, senhaUsuario):
             self.mostrarPopup("Preencha todos os campos")
             return
         else:
-            resultado = self.conexaoBD.consultarComParametros("SELECT * FROM usuario WHERE nome = %s AND senha = %s", (nomeUsuario, senhaUsuario))
-            print(resultado)
-
-    
+            
+            if resultado != []:
+                
+                self.construtorTelaMenuUser.rotuloMenuInicial.setText(f"Menu - {nomeUsuario}")
+                self.layoutContentPane.setCurrentIndex(4)
+                print(resultado)
+                
+            else:
+                 self.mostrarPopup("Usuário não encontrado!")
+                
     def exibirTelaRemover(self):
         
         self.layoutContentPane.setCurrentIndex(3)   
@@ -144,6 +174,9 @@ class JanelaPrincipal(QMainWindow):
         popup.setText("USUÁRIO REMOVIDO!")
         popup.exec()
         
+    def exibirCriarPlay(self):
+        
+        self.layoutContentPane.setCurrentIndex(5)
         
 
 def main():
