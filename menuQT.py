@@ -68,22 +68,28 @@ class JanelaPrincipal(QMainWindow):
 
         self.setCentralWidget(self.contentPane)
 
+    def mostrarPopup(self, mensagem):
+        popup = QMessageBox(self)
+        popup.setText(mensagem)
+        popup.exec()
+
+    def validarCampos(self, *campos):
+        return all(campo != "" for campo in campos)
+
     def exibirTelaCadastrar(self):
         
         self.layoutContentPane.setCurrentIndex(1)
 
     def cadastrarUsuario(self):
         nomeUsuario = self.construtorTelaCadastrar.inputUsuario.text()
-        emailUsuario = self.construtorTelaCadastrar.inputEmail.text()
+        EmailUsuario = self.construtorTelaCadastrar.inputEmail.text()
         senhaUsuario = self.construtorTelaCadastrar.inputSenha.text()
 
-        if (nomeUsuario == "" or  emailUsuario == "" or  senhaUsuario == ""):
-            popup = QMessageBox(self)
-            popup.setText("Preencha todos os campos")
-            popup.exec()
+        if not self.validarCampos(nomeUsuario, EmailUsuario, senhaUsuario):
+            self.mostrarPopup("Preencha todos os campos")
+            return
         else:
-
-            self.conexaoBD.manipularComParametros("INSERT INTO usuario (nome,senha,email) VALUES(%s, %s, %s)",  (nomeUsuario, senhaUsuario, emailUsuario))
+            self.conexaoBD.manipularComParametros("INSERT INTO usuario (nome,senha,email) VALUES(%s, %s, %s)",  (nomeUsuario, senhaUsuario, EmailUsuario))
 
             resultado = self.conexaoBD.consultar("SELECT * FROM usuario")
             print(resultado)
@@ -96,10 +102,9 @@ class JanelaPrincipal(QMainWindow):
         nomeUsuario = self.construtorTelaLogin.inputUsuario.text()
         senhaUsuario = self.construtorTelaLogin.inputSenha.text()
 
-        if (nomeUsuario == "" or  senhaUsuario == ""):
-            popup = QMessageBox(self)
-            popup.setText("Preencha todos os campos")
-            popup.exec()
+        if not self.validarCampos(nomeUsuario, senhaUsuario):
+            self.mostrarPopup("Preencha todos os campos")
+            return
         else:
             resultado = self.conexaoBD.consultarComParametros("SELECT * FROM usuario WHERE nome = %s AND senha = %s", (nomeUsuario, senhaUsuario))
             print(resultado)
@@ -111,8 +116,12 @@ class JanelaPrincipal(QMainWindow):
     
     def RemoverUsuario(self):
         EmailUsuario = self.construtorTelaRemover.inputEmail.text()
-
-        usuario_existente = self.conexaoBD.consultarComParametros("SELECT * FROM usuario WHERE email = %s", (EmailUsuario,))
+        
+        if not self.validarCampos(EmailUsuario):
+            self.mostrarPopup("Preencha todos os campos")
+            return
+        else:
+            usuario_existente = self.conexaoBD.consultarComParametros("SELECT * FROM usuario WHERE email = %s", (EmailUsuario,))
 
         if usuario_existente:
             id_usuario = usuario_existente[0][0]
@@ -131,8 +140,9 @@ class JanelaPrincipal(QMainWindow):
         self.conexaoBD.manipularComParametros("DELETE FROM playlist WHERE id_usuario = %s", (id_usuario,))
         self.conexaoBD.manipularComParametros("DELETE FROM usuario WHERE email = %s", ( EmailUsuario,))
         
-        print("\nUSUÁRIO REMOVIDO!")
-        
+        popup = QMessageBox(self)
+        popup.setText("USUÁRIO REMOVIDO!")
+        popup.exec()
         
         
 
