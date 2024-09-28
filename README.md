@@ -1,8 +1,8 @@
-# Spoti-Ninho 🎵
+# Spoti-Ninho
 
 ## Descrição
 
-**Spoti-Ninho** é um player de música desenvolvido em Python, com interfaces gráficas criadas em **PyQt6** e reprodução em **PySimpleGUI**. O projeto também inclui um sistema de gerenciamento de usuários e playlists utilizando SQL, além de funções para criar playlists, ver o histórico de reprodução e escutar suas músicas favoritas de forma simples e eficiente.
+**Spoti-Ninho** é um player de música desenvolvido em Python, com interfaces gráficas criadas em **PyQt6** e reprodução em **PySimpleGUI**. O projeto também inclui um sistema de gerenciamento de usuários e playlists utilizando SQL, além de funções de criar playlists, ver o histórico de reprodução e escutar suas músicas de forma simples e eficiente.
 
 ## Funcionalidades Principais
 
