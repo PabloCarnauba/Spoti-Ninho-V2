@@ -1,4 +1,4 @@
-from conexao import Conexao
+from Conexao import Conexao
 import os
 import interface
 
