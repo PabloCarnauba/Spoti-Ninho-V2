@@ -3,7 +3,7 @@ import os
 import pygame
 import player
 import sys
-from Conexao import Conexao
+from conexao import Conexao
 
 conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
 posic = 0

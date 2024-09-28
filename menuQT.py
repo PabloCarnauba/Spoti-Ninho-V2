@@ -2,9 +2,9 @@ import sys
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
-from Conexao import Conexao
-from CadastrarUser import Ui_Form
-from menuInicial import Ui_MenuInicial
+from conexao import Conexao
+from Componentes.CadastrarUser import Ui_Form
+from Componentes.menuInicial import Ui_MenuInicial
 
 class JanelaPrincipal(QMainWindow):
     def __init__(self):
@@ -71,10 +71,6 @@ class JanelaPrincipal(QMainWindow):
 
             resultado = self.conexaoBD.consultar("SELECT * FROM usuario")
             print(resultado)
-
-    
-        
-
                
 def main():
     app = QApplication(sys.argv)

@@ -1,4 +1,4 @@
-from Conexao import Conexao
+from conexao import Conexao
 
 conexaoBD = Conexao("localhost", "root", "mysql", "")
 
