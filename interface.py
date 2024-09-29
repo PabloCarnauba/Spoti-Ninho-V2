@@ -5,7 +5,7 @@ import player
 import sys
 from Conexao import Conexao
 
-conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
+conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
 posic = 0
 Iniciar = None
 musica_pausada = False
@@ -96,7 +96,7 @@ def rodar(usuario):
     ]
 
     player_info = [
-        [sg.Text('SPOT-NINHO', background_color='black', text_color='white', font=('Tahoma', 7))]
+        [sg.Text('Spoti-Ninho', background_color='black', text_color='white', font=('Tahoma', 7))]
     ]
 
     currently_playing = [

@@ -6,7 +6,7 @@ from Conexao import Conexao
 import interface
 from Componentes.CadastrarUser import Ui_CadastrarUsuario
 from Componentes.menuPYQT import Ui_MenuInicial
-from Componentes.TelaLogin import Ui_TelaLogin
+from Componentes.telalogin import Ui_TelaLogin
 from Componentes.TelaRemover import Ui_TelaRemover
 from Componentes.menu_usuario import Ui_menu_user
 from Componentes.criarPlaylist import Ui_criarPlay
@@ -15,8 +15,8 @@ from Componentes.musicas import Ui_musicas
 class JanelaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
-        self.setWindowTitle("Janela Principal")
+        self.conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
+        self.setWindowTitle("Spoti-Ninho")
         self.setFixedSize(400,300)
 
         self.contentPane = QWidget()
@@ -38,7 +38,8 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaCadastrar = Ui_CadastrarUsuario()
         self.construtorTelaCadastrar.setupUi(self.telaCadastrar)
         self.construtorTelaCadastrar.BotaoCadastrar.clicked.connect(self.cadastrarUsuario)
-        self.construtorTelaCadastrar.backButton_3.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))   
+        self.construtorTelaCadastrar.backButton_3.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))  
+        self.construtorTelaCadastrar.BotaoCadastrar.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))    
 
         self.layoutContentPane.addWidget(self.telaCadastrar)
 
@@ -136,16 +137,31 @@ class JanelaPrincipal(QMainWindow):
 
         if not self.validarCampos(nomeUsuario, EmailUsuario, senhaUsuario):
             
-            self.mostrarPopup("Preencha todos os campos")
+            self.mostrarPopup("Preencha todos os campos!")
+            
             return
         
         else:
             
-            self.conexaoBD.manipularComParametros("INSERT INTO usuario (nome,senha,email) VALUES(%s, %s, %s)",  (nomeUsuario, senhaUsuario, EmailUsuario))
-
-            resultado = self.conexaoBD.consultar("SELECT * FROM usuario")
+            if not "@gmail.com" in EmailUsuario:
+                
+                self.mostrarPopup("Insira um email válido!")
+                
+            else:
             
-            print(resultado)
+                self.conexaoBD.manipularComParametros("INSERT INTO usuario (nome,senha,email) VALUES(%s, %s, %s)",  (nomeUsuario, senhaUsuario, EmailUsuario))
+
+                resultado = self.conexaoBD.consultar("SELECT * FROM usuario")
+                
+                self.mostrarPopup("Usuário cadastrado com sucesso!")
+            
+                print(resultado)
+                
+            self.construtorTelaCadastrar.inputEmail.clear()
+                
+            self.construtorTelaCadastrar.inputSenha.clear()
+                
+            self.construtorTelaCadastrar.inputUsuario.clear()
 
     def exibirTelaLogin(self):
         
@@ -174,6 +190,10 @@ class JanelaPrincipal(QMainWindow):
                 self.construtorTelaMenuUser.rotuloMenuInicial.setText(f"Menu - {nomeUsuario}")
                 
                 self.layoutContentPane.setCurrentIndex(4)
+                
+                self.construtorTelaLogin.inputUsuario.clear()
+                
+                self.construtorTelaLogin.inputSenha.clear()
                 
                 print(resultado)
                 
@@ -219,9 +239,12 @@ class JanelaPrincipal(QMainWindow):
             
             self.conexaoBD.manipularComParametros("DELETE FROM usuario WHERE email = %s", ( EmailUsuario,))
         
+        
             popup = QMessageBox(self)
             
             popup.setText("USUÁRIO REMOVIDO!")
+            
+            self.construtorTelaRemover.inputEmail.clear()
             
             popup.exec()
         
@@ -251,6 +274,10 @@ class JanelaPrincipal(QMainWindow):
         "SELECT id_playlist FROM playlist WHERE nome_playlist = %s AND id_usuario = %s ORDER BY id_playlist DESC LIMIT 1", 
         (nome_playlist, id_usuario)
     )[0][0]
+        
+        self.mostrarPopup("Playlist adicionada.")
+        
+        self.construtorTelaCriarPlay.lineEdit.clear()
         
     def exibirTelaMusicas (self):
         
