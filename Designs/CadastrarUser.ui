@@ -31,7 +31,7 @@ background-color:grey;
   <widget class="QLabel" name="rotuloMenuInicial">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>100</x>
      <y>10</y>
      <width>261</width>
      <height>41</height>
@@ -135,9 +135,9 @@ background-color:grey;
    </property>
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>80</x>
      <y>250</y>
-     <width>181</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -157,13 +157,13 @@ QPushButton:pressed {
     <string>CADASTRAR</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="backButton_2">
+  <widget class="QPushButton" name="backButton_3">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>0</y>
-     <width>75</width>
-     <height>24</height>
+     <x>220</x>
+     <y>250</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="whatsThis">
@@ -173,7 +173,7 @@ QPushButton:pressed {
     <string notr="true">color: white</string>
    </property>
    <property name="text">
-    <string>Voltar</string>
+    <string>VOLTAR</string>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -216,7 +216,7 @@ QPushButton:pressed {
   <zorder>Senha</zorder>
   <zorder>inputSenha</zorder>
   <zorder>BotaoCadastrar</zorder>
-  <zorder>backButton_2</zorder>
+  <zorder>backButton_3</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -80,31 +80,6 @@ background-color:grey;
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Senha : &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="BotaoLogin">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>240</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-}
-
-QPushButton:pressed {
-    background-color: grey;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Login</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="rotuloMenuInicial_2">
    <property name="geometry">
     <rect>
@@ -128,13 +103,38 @@ QPushButton:pressed {
     <string>LOGIN</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="backButton_2">
+  <widget class="QPushButton" name="BotaoLogin">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>0</y>
-     <width>75</width>
-     <height>24</height>
+     <x>70</x>
+     <y>240</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+QPushButton:pressed {
+    background-color: grey;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>ENTRAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>240</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="whatsThis">
@@ -144,7 +144,7 @@ QPushButton:pressed {
     <string notr="true">color: white</string>
    </property>
    <property name="text">
-    <string>Voltar</string>
+    <string>VOLTAR</string>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -183,9 +183,9 @@ QPushButton:pressed {
   <zorder>Usuario</zorder>
   <zorder>inputSenha</zorder>
   <zorder>Senha</zorder>
-  <zorder>BotaoLogin</zorder>
   <zorder>rotuloMenuInicial_2</zorder>
-  <zorder>backButton_2</zorder>
+  <zorder>BotaoLogin</zorder>
+  <zorder>backButton_3</zorder>
  </widget>
  <resources/>
  <connections/>

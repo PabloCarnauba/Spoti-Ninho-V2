@@ -5,7 +5,7 @@ from PyQt6.QtGui import *
 from Conexao import Conexao
 from Componentes.CadastrarUser import Ui_CadastrarUsuario
 from Componentes.menuPYQT import Ui_MenuInicial
-from Componentes.telalogin import Ui_TelaLogin
+from Componentes.TelaLogin import Ui_TelaLogin
 from Componentes.TelaRemover import Ui_TelaRemover
 
 class JanelaPrincipal(QMainWindow):
@@ -34,7 +34,7 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaCadastrar = Ui_CadastrarUsuario()
         self.construtorTelaCadastrar.setupUi(self.telaCadastrar)
         self.construtorTelaCadastrar.BotaoCadastrar.clicked.connect(self.cadastrarUsuario)
-        self.construtorTelaCadastrar.backButton_2.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))   
+        self.construtorTelaCadastrar.backButton_3.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))   
 
         self.layoutContentPane.addWidget(self.telaCadastrar)
 
@@ -42,7 +42,7 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaLogin = Ui_TelaLogin()
         self.construtorTelaLogin.setupUi(self.TelaLogin)
         self.construtorTelaLogin.BotaoLogin.clicked.connect(self.LogarUsuario)
-        self.construtorTelaLogin.backButton_2.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))
+        self.construtorTelaLogin.backButton_3.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))
         self.layoutContentPane.addWidget(self.TelaLogin)
 
         self.TelaRemover = QWidget()
