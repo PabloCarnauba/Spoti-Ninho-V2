@@ -13,8 +13,17 @@ class Ui_menu_user(object):
     def setupUi(self, menu_user):
         menu_user.setObjectName("menu_user")
         menu_user.resize(400, 300)
+        menu_user.setStyleSheet("QPushButton{\n"
+"background-color:black ;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color:grey;\n"
+"\n"
+"}")
         self.rotuloMenuInicial = QtWidgets.QLabel(parent=menu_user)
-        self.rotuloMenuInicial.setGeometry(QtCore.QRect(130, 10, 171, 41))
+        self.rotuloMenuInicial.setGeometry(QtCore.QRect(120, 40, 171, 41))
         font = QtGui.QFont()
         font.setFamily("Rockwell Extra Bold")
         font.setPointSize(14)
@@ -23,45 +32,78 @@ class Ui_menu_user(object):
         self.rotuloMenuInicial.setStyleSheet("Color rgb(255, 255, 255)")
         self.rotuloMenuInicial.setObjectName("rotuloMenuInicial")
         self.button_criarPlay = QtWidgets.QPushButton(parent=menu_user)
-        self.button_criarPlay.setGeometry(QtCore.QRect(20, 80, 161, 41))
+        self.button_criarPlay.setGeometry(QtCore.QRect(20, 110, 171, 41))
         self.button_criarPlay.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
 "border-radius: 10px;\n"
 "\n"
-"")
+"QPushButton{\n"
+"background-color:black ;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color:grey;\n"
+"\n"
+"}")
         self.button_criarPlay.setObjectName("button_criarPlay")
-        self.button_verPlay = QtWidgets.QPushButton(parent=menu_user)
-        self.button_verPlay.setGeometry(QtCore.QRect(220, 80, 161, 41))
-        self.button_verPlay.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
-        self.button_verPlay.setObjectName("button_verPlay")
-        self.button_historico = QtWidgets.QPushButton(parent=menu_user)
-        self.button_historico.setGeometry(QtCore.QRect(20, 140, 161, 41))
-        self.button_historico.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
-        self.button_historico.setObjectName("button_historico")
         self.button_escutarPlay = QtWidgets.QPushButton(parent=menu_user)
-        self.button_escutarPlay.setGeometry(QtCore.QRect(220, 140, 161, 41))
+        self.button_escutarPlay.setGeometry(QtCore.QRect(210, 110, 171, 41))
         self.button_escutarPlay.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
 "border-radius: 10px;\n"
 "\n"
+"QPushButton{\n"
+"background-color:black ;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color:grey;\n"
+"\n"
+"}\n"
 "")
         self.button_escutarPlay.setObjectName("button_escutarPlay")
         self.button_sair = QtWidgets.QPushButton(parent=menu_user)
-        self.button_sair.setGeometry(QtCore.QRect(20, 210, 361, 41))
+        self.button_sair.setGeometry(QtCore.QRect(20, 160, 361, 41))
         self.button_sair.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
 "border-radius: 10px;\n"
 "\n"
-"")
+"QPushButton{\n"
+"background-color:black ;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color:grey;\n"
+"\n"
+"}")
         self.button_sair.setObjectName("button_sair")
+        self.backButton_4 = QtWidgets.QPushButton(parent=menu_user)
+        self.backButton_4.setGeometry(QtCore.QRect(130, 250, 151, 31))
+        self.backButton_4.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: black;\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: grey;\n"
+"}")
+        self.backButton_4.setObjectName("backButton_4")
+        self.frame = QtWidgets.QFrame(parent=menu_user)
+        self.frame.setGeometry(QtCore.QRect(0, 0, 400, 300))
+        self.frame.setMinimumSize(QtCore.QSize(400, 300))
+        self.frame.setMaximumSize(QtCore.QSize(400, 300))
+        self.frame.setStyleSheet("background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))")
+        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame.setObjectName("frame")
+        self.frame.raise_()
+        self.rotuloMenuInicial.raise_()
+        self.button_criarPlay.raise_()
+        self.button_escutarPlay.raise_()
+        self.button_sair.raise_()
+        self.backButton_4.raise_()
 
         self.retranslateUi(menu_user)
         QtCore.QMetaObject.connectSlotsByName(menu_user)
@@ -69,9 +111,9 @@ class Ui_menu_user(object):
     def retranslateUi(self, menu_user):
         _translate = QtCore.QCoreApplication.translate
         menu_user.setWindowTitle(_translate("menu_user", "Dialog"))
-        self.rotuloMenuInicial.setText(_translate("menu_user", "MENU USUÁRIO"))
+        self.rotuloMenuInicial.setText(_translate("menu_user", "<html><head/><body><p align=\"center\">MENU USUÁRIO</p></body></html>"))
         self.button_criarPlay.setText(_translate("menu_user", "CRIAR PLAYLIST"))
-        self.button_verPlay.setText(_translate("menu_user", "VER PLAYLISTS"))
-        self.button_historico.setText(_translate("menu_user", "HISTÓRICO"))
         self.button_escutarPlay.setText(_translate("menu_user", "ESCUTAR PLAYLIST"))
         self.button_sair.setText(_translate("menu_user", "SAIR"))
+        self.backButton_4.setWhatsThis(_translate("menu_user", "<html><head/><body><p><span style=\" font-weight:700;\">Voltar</span></p></body></html>"))
+        self.backButton_4.setText(_translate("menu_user", "VOLTAR"))

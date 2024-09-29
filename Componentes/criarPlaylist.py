@@ -14,7 +14,7 @@ class Ui_criarPlay(object):
         criarPlay.setObjectName("criarPlay")
         criarPlay.resize(400, 300)
         self.rotuloMenuInicial = QtWidgets.QLabel(parent=criarPlay)
-        self.rotuloMenuInicial.setGeometry(QtCore.QRect(100, 10, 191, 41))
+        self.rotuloMenuInicial.setGeometry(QtCore.QRect(100, 30, 191, 41))
         font = QtGui.QFont()
         font.setFamily("Rockwell Extra Bold")
         font.setPointSize(14)
@@ -23,7 +23,7 @@ class Ui_criarPlay(object):
         self.rotuloMenuInicial.setStyleSheet("Color rgb(255, 255, 255)")
         self.rotuloMenuInicial.setObjectName("rotuloMenuInicial")
         self.label = QtWidgets.QLabel(parent=criarPlay)
-        self.label.setGeometry(QtCore.QRect(100, 80, 221, 31))
+        self.label.setGeometry(QtCore.QRect(90, 100, 221, 31))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
@@ -33,13 +33,46 @@ class Ui_criarPlay(object):
         self.lineEdit.setGeometry(QtCore.QRect(100, 140, 201, 31))
         self.lineEdit.setObjectName("lineEdit")
         self.button_escutarPlay = QtWidgets.QPushButton(parent=criarPlay)
-        self.button_escutarPlay.setGeometry(QtCore.QRect(120, 210, 151, 31))
-        self.button_escutarPlay.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
+        self.button_escutarPlay.setGeometry(QtCore.QRect(210, 220, 151, 31))
+        self.button_escutarPlay.setStyleSheet("QPushButton {\n"
+"    background-color: black;\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: grey;\n"
+"}\n"
 "\n"
 "")
         self.button_escutarPlay.setObjectName("button_escutarPlay")
+        self.backButton_4 = QtWidgets.QPushButton(parent=criarPlay)
+        self.backButton_4.setGeometry(QtCore.QRect(40, 220, 151, 31))
+        self.backButton_4.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color: black;\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: grey;\n"
+"}")
+        self.backButton_4.setObjectName("backButton_4")
+        self.frame = QtWidgets.QFrame(parent=criarPlay)
+        self.frame.setGeometry(QtCore.QRect(0, -10, 400, 300))
+        self.frame.setMinimumSize(QtCore.QSize(400, 300))
+        self.frame.setMaximumSize(QtCore.QSize(400, 300))
+        self.frame.setStyleSheet("background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))")
+        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame.setObjectName("frame")
+        self.frame.raise_()
+        self.rotuloMenuInicial.raise_()
+        self.label.raise_()
+        self.lineEdit.raise_()
+        self.button_escutarPlay.raise_()
+        self.backButton_4.raise_()
 
         self.retranslateUi(criarPlay)
         QtCore.QMetaObject.connectSlotsByName(criarPlay)
@@ -47,6 +80,8 @@ class Ui_criarPlay(object):
     def retranslateUi(self, criarPlay):
         _translate = QtCore.QCoreApplication.translate
         criarPlay.setWindowTitle(_translate("criarPlay", "Dialog"))
-        self.rotuloMenuInicial.setText(_translate("criarPlay", "CRIAR PLAYLIST"))
-        self.label.setText(_translate("criarPlay", "NOME DA PLAYLIST :"))
-        self.button_escutarPlay.setText(_translate("criarPlay", "CRIAR PLAYLIST"))
+        self.rotuloMenuInicial.setText(_translate("criarPlay", "<html><head/><body><p align=\"center\">CRIAR PLAYLIST</p></body></html>"))
+        self.label.setText(_translate("criarPlay", "<html><head/><body><p align=\"center\">NOME DA PLAYLIST:</p></body></html>"))
+        self.button_escutarPlay.setText(_translate("criarPlay", "ADICIONAR"))
+        self.backButton_4.setWhatsThis(_translate("criarPlay", "<html><head/><body><p><span style=\" font-weight:700;\">Voltar</span></p></body></html>"))
+        self.backButton_4.setText(_translate("criarPlay", "VOLTAR"))

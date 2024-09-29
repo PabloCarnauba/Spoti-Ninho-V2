@@ -13,8 +13,18 @@ class Ui_musicas(object):
     def setupUi(self, musicas):
         musicas.setObjectName("musicas")
         musicas.resize(400, 300)
+        musicas.setStyleSheet("QPushButton {\n"
+"    background-color: black;\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: grey;\n"
+"}\n"
+"")
         self.rotuloMenuInicial = QtWidgets.QLabel(parent=musicas)
-        self.rotuloMenuInicial.setGeometry(QtCore.QRect(150, 10, 101, 41))
+        self.rotuloMenuInicial.setGeometry(QtCore.QRect(160, 10, 101, 41))
         font = QtGui.QFont()
         font.setFamily("Rockwell Extra Bold")
         font.setPointSize(14)
@@ -23,85 +33,74 @@ class Ui_musicas(object):
         self.rotuloMenuInicial.setStyleSheet("Color rgb(255, 255, 255)")
         self.rotuloMenuInicial.setObjectName("rotuloMenuInicial")
         self.beggin = QtWidgets.QPushButton(parent=musicas)
-        self.beggin.setGeometry(QtCore.QRect(40, 80, 141, 21))
-        self.beggin.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
+        self.beggin.setGeometry(QtCore.QRect(40, 60, 141, 21))
+        self.beggin.setStyleSheet("\n"
 "")
         self.beggin.setObjectName("beggin")
         self.AnjoAzul = QtWidgets.QPushButton(parent=musicas)
-        self.AnjoAzul.setGeometry(QtCore.QRect(40, 120, 141, 21))
-        self.AnjoAzul.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.AnjoAzul.setGeometry(QtCore.QRect(40, 100, 141, 21))
+        self.AnjoAzul.setStyleSheet("")
         self.AnjoAzul.setObjectName("AnjoAzul")
         self.Troco = QtWidgets.QPushButton(parent=musicas)
-        self.Troco.setGeometry(QtCore.QRect(40, 160, 141, 21))
-        self.Troco.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.Troco.setGeometry(QtCore.QRect(40, 140, 141, 21))
+        self.Troco.setStyleSheet("")
         self.Troco.setObjectName("Troco")
         self.Intheend = QtWidgets.QPushButton(parent=musicas)
-        self.Intheend.setGeometry(QtCore.QRect(40, 200, 141, 21))
-        self.Intheend.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
+        self.Intheend.setGeometry(QtCore.QRect(40, 180, 141, 21))
+        self.Intheend.setStyleSheet("\n"
 "")
         self.Intheend.setObjectName("Intheend")
         self.Icarly = QtWidgets.QPushButton(parent=musicas)
-        self.Icarly.setGeometry(QtCore.QRect(40, 240, 141, 21))
-        self.Icarly.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.Icarly.setGeometry(QtCore.QRect(40, 220, 141, 21))
+        self.Icarly.setStyleSheet("")
         self.Icarly.setObjectName("Icarly")
         self.Medobobo = QtWidgets.QPushButton(parent=musicas)
-        self.Medobobo.setGeometry(QtCore.QRect(220, 240, 141, 21))
-        self.Medobobo.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.Medobobo.setGeometry(QtCore.QRect(220, 220, 141, 21))
+        self.Medobobo.setStyleSheet("")
         self.Medobobo.setObjectName("Medobobo")
         self.Dancin = QtWidgets.QPushButton(parent=musicas)
-        self.Dancin.setGeometry(QtCore.QRect(220, 160, 141, 21))
-        self.Dancin.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.Dancin.setGeometry(QtCore.QRect(220, 140, 141, 21))
+        self.Dancin.setStyleSheet("")
         self.Dancin.setObjectName("Dancin")
         self.blue = QtWidgets.QPushButton(parent=musicas)
-        self.blue.setGeometry(QtCore.QRect(220, 80, 141, 21))
-        self.blue.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.blue.setGeometry(QtCore.QRect(220, 60, 141, 21))
+        self.blue.setStyleSheet("")
         self.blue.setObjectName("blue")
         self.Sunshine = QtWidgets.QPushButton(parent=musicas)
-        self.Sunshine.setGeometry(QtCore.QRect(220, 120, 141, 21))
-        self.Sunshine.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
-"\n"
-"")
+        self.Sunshine.setGeometry(QtCore.QRect(220, 100, 141, 21))
+        self.Sunshine.setStyleSheet("")
         self.Sunshine.setObjectName("Sunshine")
         self.Eduard = QtWidgets.QPushButton(parent=musicas)
-        self.Eduard.setGeometry(QtCore.QRect(220, 200, 141, 21))
-        self.Eduard.setStyleSheet("color: white;\n"
-"background-color: rgb(0, 0, 0);\n"
-"border-radius: 10px;\n"
+        self.Eduard.setGeometry(QtCore.QRect(220, 180, 141, 21))
+        self.Eduard.setStyleSheet("\n"
 "\n"
 "")
         self.Eduard.setObjectName("Eduard")
+        self.backButton_4 = QtWidgets.QPushButton(parent=musicas)
+        self.backButton_4.setGeometry(QtCore.QRect(130, 260, 141, 31))
+        self.backButton_4.setStyleSheet("color: white")
+        self.backButton_4.setObjectName("backButton_4")
+        self.frame = QtWidgets.QFrame(parent=musicas)
+        self.frame.setGeometry(QtCore.QRect(0, 0, 400, 300))
+        self.frame.setMinimumSize(QtCore.QSize(400, 300))
+        self.frame.setMaximumSize(QtCore.QSize(400, 300))
+        self.frame.setStyleSheet("background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))")
+        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame.setObjectName("frame")
+        self.frame.raise_()
+        self.rotuloMenuInicial.raise_()
+        self.beggin.raise_()
+        self.AnjoAzul.raise_()
+        self.Troco.raise_()
+        self.Intheend.raise_()
+        self.Icarly.raise_()
+        self.Medobobo.raise_()
+        self.Dancin.raise_()
+        self.blue.raise_()
+        self.Sunshine.raise_()
+        self.Eduard.raise_()
+        self.backButton_4.raise_()
 
         self.retranslateUi(musicas)
         QtCore.QMetaObject.connectSlotsByName(musicas)
@@ -109,7 +108,7 @@ class Ui_musicas(object):
     def retranslateUi(self, musicas):
         _translate = QtCore.QCoreApplication.translate
         musicas.setWindowTitle(_translate("musicas", "Dialog"))
-        self.rotuloMenuInicial.setText(_translate("musicas", "MUSICAS"))
+        self.rotuloMenuInicial.setText(_translate("musicas", "MÚSICAS"))
         self.beggin.setText(_translate("musicas", "Beggin"))
         self.AnjoAzul.setText(_translate("musicas", "Anjo Azul"))
         self.Troco.setText(_translate("musicas", "Troco de calçada"))
@@ -120,3 +119,5 @@ class Ui_musicas(object):
         self.blue.setText(_translate("musicas", "Blue Bird"))
         self.Sunshine.setText(_translate("musicas", "Sunshine"))
         self.Eduard.setText(_translate("musicas", "Eduardo e Mônica"))
+        self.backButton_4.setWhatsThis(_translate("musicas", "<html><head/><body><p><span style=\" font-weight:700;\">Voltar</span></p></body></html>"))
+        self.backButton_4.setText(_translate("musicas", "VOLTAR"))

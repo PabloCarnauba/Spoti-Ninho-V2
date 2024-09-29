@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>10</y>
+     <y>30</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -33,14 +33,14 @@
     <string notr="true">Color rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>CRIAR PLAYLIST</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;CRIAR PLAYLIST&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>80</y>
+     <x>90</x>
+     <y>100</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -52,7 +52,7 @@
     </font>
    </property>
    <property name="text">
-    <string>NOME DA PLAYLIST :</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;NOME DA PLAYLIST:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
@@ -68,23 +68,94 @@
   <widget class="QPushButton" name="button_escutarPlay">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>210</y>
+     <x>210</x>
+     <y>220</y>
      <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
+    <string notr="true">QPushButton {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+QPushButton:pressed {
+    background-color: grey;
+}
 
 </string>
    </property>
    <property name="text">
-    <string>CRIAR PLAYLIST</string>
+    <string>ADICIONAR</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="backButton_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>220</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Voltar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+QPushButton:pressed {
+    background-color: grey;
+}</string>
+   </property>
+   <property name="text">
+    <string>VOLTAR</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>rotuloMenuInicial</zorder>
+  <zorder>label</zorder>
+  <zorder>lineEdit</zorder>
+  <zorder>button_escutarPlay</zorder>
+  <zorder>backButton_4</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -61,10 +61,12 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaMenuUser.setupUi(self.TelaMenuUser)
         self.construtorTelaMenuUser.button_sair.clicked.connect(lambda:self.close())
         #self.construtorTelaMenuUser.button_verPlay.clicked.connect()
+        self.construtorTelaMenuUser.button_escutarPlay.clicked.connect(lambda:self.close())
         self.construtorTelaMenuUser.button_escutarPlay.clicked.connect(self.exibirPlayList)
         #self.construtorTelaMenuUser.button_historico.clicked.connect()
         self.construtorTelaMenuUser.button_criarPlay.clicked.connect(self.exibirCriarPlay)
         self.layoutContentPane.addWidget(self.TelaMenuUser)
+        self.construtorTelaMenuUser.backButton_4.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(0))
         
         self.TelaCriarPlay = QWidget()
         self.construtorTelaCriarPlay = Ui_criarPlay()
@@ -72,10 +74,12 @@ class JanelaPrincipal(QMainWindow):
         self.construtorTelaCriarPlay.button_escutarPlay.clicked.connect(self.criarPlaylist)
         self.construtorTelaCriarPlay.button_escutarPlay.clicked.connect(self.exibirTelaMusicas)
         self.layoutContentPane.addWidget(self.TelaCriarPlay)
+        self.construtorTelaCriarPlay.backButton_4.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(4))
         
         self.TelaMusicas = QWidget()
         self.construtorTelaMusicas = Ui_musicas()
         self.construtorTelaMusicas.setupUi(self.TelaMusicas)
+        self.construtorTelaMusicas.backButton_4.clicked.connect(lambda: self.layoutContentPane.setCurrentIndex(5))
 
         
         lista_musicas = [self.construtorTelaMusicas.Medobobo,self.construtorTelaMusicas.Dancin, self.construtorTelaMusicas.beggin, self.construtorTelaMusicas.AnjoAzul, self.construtorTelaMusicas.Troco, self.construtorTelaMusicas.blue, self.construtorTelaMusicas.Eduard, self.construtorTelaMusicas.Intheend, self.construtorTelaMusicas.Sunshine,self.construtorTelaMusicas.Icarly]
@@ -274,8 +278,6 @@ class JanelaPrincipal(QMainWindow):
         nome_user = resultado[0][1]
         
         interface.rodar(nome_user)
-        
-        self.construtorTelaMenuUser.button_escutarPlay.clicked.connect(self.close())
         
 
 def main():

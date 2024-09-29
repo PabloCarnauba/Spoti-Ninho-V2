@@ -13,10 +13,22 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+QPushButton:pressed {
+    background-color: grey;
+}
+</string>
+  </property>
   <widget class="QLabel" name="rotuloMenuInicial">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>160</x>
      <y>10</y>
      <width>101</width>
      <height>41</height>
@@ -33,23 +45,20 @@
     <string notr="true">Color rgb(255, 255, 255)</string>
    </property>
    <property name="text">
-    <string>MUSICAS</string>
+    <string>MÚSICAS</string>
    </property>
   </widget>
   <widget class="QPushButton" name="beggin">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>80</y>
+     <y>60</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
+    <string notr="true">
 </string>
    </property>
    <property name="text">
@@ -60,17 +69,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>120</y>
+     <y>100</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Anjo Azul</string>
@@ -80,17 +85,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>160</y>
+     <y>140</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Troco de calçada</string>
@@ -100,16 +101,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>200</y>
+     <y>180</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
+    <string notr="true">
 </string>
    </property>
    <property name="text">
@@ -120,17 +118,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>240</y>
+     <y>220</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Tema Icarly</string>
@@ -140,17 +134,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>240</y>
+     <y>220</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Medo bobo</string>
@@ -160,17 +150,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>160</y>
+     <y>140</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Dancin</string>
@@ -180,17 +166,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>80</y>
+     <y>60</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Blue Bird</string>
@@ -200,17 +182,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>120</y>
+     <y>100</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
-
-</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Sunshine</string>
@@ -220,15 +198,13 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>200</y>
+     <y>180</y>
      <width>141</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: white;
-background-color: rgb(0, 0, 0);
-border-radius: 10px;
+    <string notr="true">
 
 </string>
    </property>
@@ -236,6 +212,69 @@ border-radius: 10px;
     <string>Eduardo e Mônica</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="backButton_4">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>260</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Voltar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white</string>
+   </property>
+   <property name="text">
+    <string>VOLTAR</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>400</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>rotuloMenuInicial</zorder>
+  <zorder>beggin</zorder>
+  <zorder>AnjoAzul</zorder>
+  <zorder>Troco</zorder>
+  <zorder>Intheend</zorder>
+  <zorder>Icarly</zorder>
+  <zorder>Medobobo</zorder>
+  <zorder>Dancin</zorder>
+  <zorder>blue</zorder>
+  <zorder>Sunshine</zorder>
+  <zorder>Eduard</zorder>
+  <zorder>backButton_4</zorder>
  </widget>
  <resources/>
  <connections/>
