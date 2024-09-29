@@ -2,7 +2,7 @@ from Conexao import Conexao
 import os
 import interface
 
-conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
+conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
 
 def cadastrar_usuario():
     

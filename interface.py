@@ -5,7 +5,7 @@ import player
 import sys
 from Conexao import Conexao
 
-conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
+conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
 posic = 0
 Iniciar = None
 musica_pausada = False

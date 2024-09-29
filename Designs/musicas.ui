@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>musicas</class>
+ <widget class="QDialog" name="musicas">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="rotuloMenuInicial">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Rockwell Extra Bold</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">Color rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string>MUSICAS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="beggin">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Beggin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AnjoAzul">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>120</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Anjo Azul</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Troco">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>160</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Troco de calçada</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Intheend">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>In The End</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Icarly">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>240</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Tema Icarly</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Medobobo">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>240</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Medo bobo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Dancin">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>160</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Dancin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="blue">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Blue Bird</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Sunshine">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Sunshine</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Eduard">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>200</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;
+background-color: rgb(0, 0, 0);
+border-radius: 10px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Eduardo e Mônica</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
