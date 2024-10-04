@@ -15,7 +15,7 @@ from Componentes.musicas import Ui_musicas
 class JanelaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.conexaoBD = Conexao("localhost", "root", "85106429", "spotninho")
+        self.conexaoBD = Conexao("localhost", "root", "mysql", "spotninho")
         self.setWindowTitle("Spoti-Ninho")
         self.setFixedSize(400,300)
 

@@ -2,7 +2,7 @@
 
 ## Descrição
 
-**Spoti-Ninho** é um player de música desenvolvido em Python, com interfaces gráficas criadas em **PyQt6** e reprodução em **PySimpleGUI**. O projeto também inclui um sistema de gerenciamento de usuários e playlists utilizando SQL, além de funções de criar playlists, ver o histórico de reprodução e escutar suas músicas de forma simples e eficiente.
+**Spoti-Ninho** é um player de música desenvolvido em Python, utilizando **PyQt6** para as interfaces gráficas, **PySimpleGUI** para a reprodução de músicas, e gerenciamento de usuários e playlists com **SQL**. O projeto oferece uma experiência completa de criação, gestão e reprodução de playlists de forma simples e intuitiva, tanto via interface gráfica quanto terminal.
 
 ## Funcionalidades Principais
 
@@ -10,6 +10,7 @@
 - **Playlists Personalizadas**: Criação, visualização e reprodução de playlists.
 - **Histórico de Reprodução**: Visualize suas faixas reproduzidas.
 - **Player de Música Completo**: Reprodução, pausa, retroceder e avançar faixas.
+- **Interação via Terminal**: Menu de usuário e menu principal no terminal.
 - **Informações das Faixas**: Exibição do nome da música, artista e capa do álbum.
 
 ## Estrutura do Projeto
@@ -18,18 +19,34 @@
 - **`interface.py`**: Interface do player musical feita em PySimpleGUI.
 - **`menuQT.py`**: Gerencia os menus e interações com o usuário via PyQt6.
 - **`player.py`**: Lida com a reprodução das faixas usando Pygame.
+- **`menu.py`**: Menu de interação via terminal.
 - **`setup.py`**: Configura o banco de dados (MySQL Workbench).
 
-## Interfaces Gráficas
+## Menus
 
-### Menu Spoti-Ninho:
-- **Menu Spoti-Ninho**: Para cadastro, login e remoção de usuários.
-- **Menu Usuário**: Acesso às funcionalidades de playlists e histórico, além do player de música.
+### Menu Spoti-Ninho (Terminal - `menu.py`):
+- [1] CADASTRAR USUÁRIO
+- [2] REMOVER USUÁRIO
+- [3] ENTRAR
+- [0] SAIR
 
-### Menu do Usuário:
-- **Playlists**: Criação e gerenciamento.
-- **Histórico**: Acompanhe suas faixas reproduzidas no player.
-- **Player**: Acesso ao player PySimpleGUI para tocar as playlists.
+### Menu Usuário (Terminal - `menu.py`):
+- [1] CRIAR PLAYLIST
+- [2] VER PLAYLISTS
+- [3] VER HISTÓRICO
+- [4] ESCUTAR PLAYLISTS
+- [5] SAIR
+
+### Menu Spoti-Ninho (Interface - `menuQT.py`):
+- **Cadastro de Usuários**
+- **Login de Usuários**
+- **Remoção de Usuários**
+
+> **Nota**: As funções de "Ver Playlists" e "Ver Histórico" ainda não foram implementadas na versão de interface gráfica (`menuQT.py`).
+
+### Menu do Usuário (Interface):
+- **Criação de Playlists**
+- **Player de Música**: Acesso ao player PySimpleGUI para tocar as playlists.
 
 ## Requisitos
 
@@ -53,11 +70,15 @@
    ```bash
    python setup.py
    ```
-4. Execute o menu principal:
+4. Execute o menu principal (PyQt6):
    ```bash
    python menuQT.py
+   ```
+5. Ou utilize a versão terminal:
+   ```bash
+   python menu.py
    ```
 
 ## Contribuição
 
-Contribuições são sempre bem-vindas! Se desejar sugerir melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request. Para grandes alterações, por favor, abra uma issue antes para discutirmos sua proposta.
+Contribuições são bem-vindas! Para sugerir melhorias, abra uma issue ou envie um pull request. Para grandes alterações, por favor, abra uma issue para discutir sua proposta.
